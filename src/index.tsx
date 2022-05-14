@@ -29,7 +29,11 @@ if (__DEV__) {
     .catch(() => console.error)
 }
 
-const Section: FC<{ title: string }> = ({ children, title }) => {
+interface Props {
+  title: string
+}
+
+const Section: FC<Props> = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark'
   return (
     <View style={styles.sectionContainer}>
